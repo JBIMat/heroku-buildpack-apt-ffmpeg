@@ -51,6 +51,7 @@ apt-get $APT_OPTIONS update | indent
 
 topic "Fetching .debs for ffmpeg"
 apt-get $APT_OPTIONS -y --force-yes --no-install-recommends -d install --reinstall ffmpeg | indent
+apt-get $APT_OPTIONS -y --force-yes --no-install-recommends -d install --reinstall pkg-config
 
 mkdir -p $BUILD_DIR/.apt
 
